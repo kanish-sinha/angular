@@ -1,1 +1,6 @@
-<p>exercise4 works!</p>
+<div *ngIf="selected;else notselect">
+    <i class="bi bi-star" (click)="f1()"></i>
+</div>
+<ng-template #notselect>
+    <i class="bi bi-star-fill" (click)="f1()"></i>
+</ng-template>

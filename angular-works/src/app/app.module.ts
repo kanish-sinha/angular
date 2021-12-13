@@ -9,6 +9,12 @@ import { Exercise3Component } from './exercise3/exercise3.component';
 import { ExercisePipePipe } from './exercise3/exercise-pipe.pipe';
 import { FormsModule } from '@angular/forms';
 import { Exercise4Component } from './exercise4/exercise4.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { Exercise5Component } from './exercise5/exercise5.component';
+import { PracticeComponent } from './practice/practice.component';
+import { LoginComponent } from './login/login.component';
+import { Exercise6Component } from './exercise6/exercise6.component';
+import { Exercise7Component } from './exercise7/exercise7.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +23,18 @@ import { Exercise4Component } from './exercise4/exercise4.component';
     Exercise2Component,
     Exercise3Component,
     ExercisePipePipe,
-    Exercise4Component
+    Exercise4Component,
+    Exercise5Component,
+    PracticeComponent,
+    LoginComponent,
+    Exercise6Component,
+    Exercise7Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

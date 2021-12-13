@@ -1,0 +1,6 @@
+.container-fluid {
+    box-sizing: content-box;
+    padding-block: 5%;
+    width: fit-content;
+    background-color: cadetblue;
+}

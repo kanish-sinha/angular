@@ -1,0 +1,29 @@
+<form class="container-fluid">
+    <div class="formGroup">
+        <div class="mb-3">
+            <label>Course Name</label>
+            <input required minlength="5" ngModel name="courseName" #courseName="ngModel" type="text" class="form-control" autocomplete="off">
+            <div class="alert alert-danger" *ngIf="courseName.touched && !courseName.valid">
+                <div *ngIf="courseName.errors?.['required']">Course name is required</div>
+                <div *ngIf="courseName.errors?.['minlength']">Course name must be 5 character</div>
+            </div>
+        </div>
+        <br>
+        <div class="mb-3">
+            <select class="form-select">
+                <option selected>Category</option>
+                <option value="1">Development</option>
+                <option value="2">Testing</option>
+                <option value="3">Production</option>
+              </select>
+        </div>
+        <br>
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input">
+            <label>Check me out</label>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <p>fine</p>
+    </div>
+</form>

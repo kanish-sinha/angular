@@ -1,0 +1,18 @@
+<div class="container-fluid">
+    <div style="box-sizing: content-box;">
+        <button (click)="fill()">
+            SHOPPING CART
+        </button>
+        <h5 [hidden]='show' style="padding-block:3%;padding-left: 2%;">
+            {{name}}
+        </h5>
+    </div>
+    <div style="box-sizing: content-box;">
+        <button (click)="cart()">
+            CART 
+        </button>
+        <h5 [hidden]='cartcond' style="padding-block: 3%;padding-left: 2%;">
+            {{cartname}}
+        </h5>
+    </div>
+</div>

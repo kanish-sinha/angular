@@ -1,0 +1,7 @@
+<div *ngIf="select;else notselect">
+    <i class="bi bi-suit-diamond" (click)="f1()" [style.cursor]="pointer"></i>
+</div>
+<ng-template #notselect>
+    <i class="bi bi-suit-diamond-fill" (click)="f1()" [style.cursor]="pointer"></i>
+</ng-template>
+<h4>{{"Like :"+count}}</h4>

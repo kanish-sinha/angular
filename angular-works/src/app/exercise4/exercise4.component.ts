@@ -6,9 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./exercise4.component.css']
 })
 export class Exercise4Component implements OnInit {
-
+  selected = true;
   constructor() { }
-
+  f1() {
+    this.selected = !this.selected;
+  }
   ngOnInit(): void {
   }
 

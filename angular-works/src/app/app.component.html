@@ -1,18 +1,42 @@
-<nav class="navbar navbar-dark bg-dark navbar-expand-md">
-    <a href="#" class="navbar-brand">DemoTech</a>
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" (click)="isCollapsed=!isCollapsed" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="navbar-collapse collapse" id="navbar">
-        <ul class="navbar-nav">
-            <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
-        </ul>
+      </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
     </div>
-</nav>
-<!-- <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-
+</nav> -->
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
     <li class="nav-item" role="presentation">
         <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Exercise 1</button>
     </li>
@@ -21,6 +45,24 @@
     </li>
     <li class="nav-item" role="presentation">
         <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Exercise 3</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pills-content-tab" data-bs-toggle="pill" data-bs-target="#pills-content" type="button" role="tab" aria-controls="pills-content" aria-selected="false">Exercise 4</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pills-exercise5-tab" data-bs-toggle="pill" data-bs-target="#pills-exercise5" type="button" role="tab" aria-controls="pills-exercise5" aria-selected="false">Exercise 5</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pills-practice-tab" data-bs-toggle="pill" data-bs-target="#pills-practice" type="button" role="tab" aria-controls="pills-practice" aria-selected="false">Practice</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pills-login-tab" data-bs-toggle="pill" data-bs-target="#pills-login" type="button" role="tab" aria-controls="pills-login" aria-selected="false">Login</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pills-exercise6-tab" data-bs-toggle="pill" data-bs-target="#pills-exercise6" type="button" role="tab" aria-controls="pills-exercise6" aria-selected="false">Exercise 6</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pills-exercise7-tab" data-bs-toggle="pill" data-bs-target="#pills-exercise7" type="button" role="tab" aria-controls="pills-exercise7" aria-selected="false">Exercise 7</button>
     </li>
 </ul>
 <div class="tab-content" id="pills-tabContent">
@@ -33,4 +75,29 @@
     <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
         <app-exercise3></app-exercise3>
     </div>
-</div> -->
+    <div class="tab-pane fade" id="pills-content" role="tabpanel" aria-labelledby="pills-content-tab">
+        <app-exercise4></app-exercise4>
+    </div>
+    <div class="tab-pane fade" id="pills-exercise5" role="tabpanel" aria-labelledby="pills-exercise5-tab">
+        <app-exercise5></app-exercise5>
+    </div>
+    <div class="tab-pane fade" id="pills-practice" role="tabpanel" aria-labelledby="pills-practice-tab">
+        <app-practice>
+            <div class="heading">
+                <h3>HEAD</h3>
+            </div>
+            <div class="heading">
+                <h5>head</h5>
+            </div>
+        </app-practice>
+    </div>
+    <div class="tab-pane fade" id="pills-login" role="tabpanel" aria-labelledby="pills-login-tab">
+        <app-login></app-login>
+    </div>
+    <div class="tab-pane fade" id="pills-exercise6" role="tabpanel" aria-labelledby="pills-exercise6-tab">
+        <app-exercise6></app-exercise6>
+    </div>
+    <div class="tab-pane fade" id="pills-exercise7" role="tabpanel" aria-labelledby="pills-exercise7-tab">
+        <app-exercise7></app-exercise7>
+    </div>
+</div>
