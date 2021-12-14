@@ -6,9 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./exercise7.component.css']
 })
 export class Exercise7Component {
-  val = '';
+  categories = [
+    { id: 1, name: 'Development' },
+    { id: 2, name: 'Testing' },
+    { id: 3, name: 'Production' }
+  ]
   constructor() { }
-  f1(x: any) {
-    console.log(x);
+  submit(f: any) {
+    console.log(f.value)
   }
 }
