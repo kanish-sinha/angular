@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./exercise7.component.css']
 })
 export class Exercise7Component {
+  val = '';
   constructor() { }
   f1(x: any) {
     console.log(x);

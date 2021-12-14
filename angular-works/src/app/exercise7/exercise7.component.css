@@ -4,3 +4,15 @@
     background-color: cadetblue;
     width: fit-content;
 }
+
+.form-control.ng-touched.ng-invalid {
+    border: 2px ridge red;
+}
+
+.form-select.ng-touched.ng-invalid {
+    border: 2px ridge red;
+}
+
+.form-check-input.ng-touched.ng-invalid {
+    border: 2px ridge red;
+}

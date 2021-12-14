@@ -10,17 +10,22 @@
         </div>
         <br>
         <div class="mb-3">
-            <select class="form-select">
-                <option selected>Category</option>
+            <select required ngModel name="category" #categoryName='ngModel' class="form-select">
                 <option value="1">Development</option>
                 <option value="2">Testing</option>
                 <option value="3">Production</option>
               </select>
+            <div class="alert alert-danger" *ngIf="categoryName.touched && !categoryName.valid">
+                <div *ngIf="categoryName.errors?.['required']">Select a category</div>
+            </div>
         </div>
         <br>
         <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input">
-            <label>Check me out</label>
+            <input required ngModel name="checkBox" #checkBox='ngModel' type="checkbox" class="form-check-input">
+            <label>Check it</label>
+            <div class="alert alert-danger" *ngIf="checkBox.touched && !checkBox.valid">
+                Please agree the checkbox
+            </div>
         </div>
         <br>
         <button type="submit" class="btn btn-primary">Submit</button>
