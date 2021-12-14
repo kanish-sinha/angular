@@ -1,0 +1,6 @@
+.container-fluid {
+    background-color: skyblue;
+    box-sizing: border-box;
+    width: fit-content;
+    padding-block: 5%;
+}

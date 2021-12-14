@@ -1,0 +1,32 @@
+<form [formGroup]="form" (ngSubmit)="submit(form)" class="container-fluid">
+    <div class="form-group">
+        <div class="mb-3">
+            <label class="form-label">Old Password</label>
+            <input formControlName="oldpassword" type="password" class="form-control">
+            <div *ngIf="oldpassword?.touched && oldpassword?.invalid " class="alert alert-danger">
+                <div *ngIf="oldpassword?.errors?.['required'];else block">Password is required</div>
+                <ng-template #block>
+                    <div *ngIf="oldpassword?.errors?.['passwordWrong']">Password is wrong</div>
+                </ng-template>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">New Password</label>
+            <input formControlName="newpassword" type="password" class="form-control">
+            <div *ngIf="newpassword?.touched && newpassword?.invalid" class='alert alert-danger'>
+                <div *ngIf="newpassword?.errors?.['required']">Password cant be empty</div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Confirm New Password</label>
+            <input formControlName="confirmpassword" type="password" class="form-control">
+            <div *ngIf="confirmpassword?.touched && confirmpassword?.invalid" class="alert alert-danger">
+                <div *ngIf="confirmpassword?.errors?.['required']">Confirm your password</div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="form.errors" class="alert alert-danger">
+        Password not matched
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

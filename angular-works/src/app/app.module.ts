@@ -7,7 +7,7 @@ import { Exercise1Component } from './exercise1/exercise1.component';
 import { Exercise2Component } from './exercise2/exercise2.component';
 import { Exercise3Component } from './exercise3/exercise3.component';
 import { ExercisePipePipe } from './exercise3/exercise-pipe.pipe';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Exercise4Component } from './exercise4/exercise4.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Exercise5Component } from './exercise5/exercise5.component';
@@ -15,6 +15,8 @@ import { PracticeComponent } from './practice/practice.component';
 import { LoginComponent } from './login/login.component';
 import { Exercise6Component } from './exercise6/exercise6.component';
 import { Exercise7Component } from './exercise7/exercise7.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { Exercise8Component } from './exercise8/exercise8.component';
 
 @NgModule({
   declarations: [
@@ -28,13 +30,16 @@ import { Exercise7Component } from './exercise7/exercise7.component';
     PracticeComponent,
     LoginComponent,
     Exercise6Component,
-    Exercise7Component
+    Exercise7Component,
+    ReactiveFormComponent,
+    Exercise8Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

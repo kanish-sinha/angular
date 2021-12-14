@@ -1,0 +1,9 @@
+.container-fluid {
+    background-color: lightcyan;
+    width: fit-content;
+    padding-block: 5%;
+}
+
+.form-control.ng-touched.ng-invalid {
+    border: 2px ridge red;
+}

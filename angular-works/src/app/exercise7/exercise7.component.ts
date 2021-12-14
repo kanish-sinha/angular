@@ -11,8 +11,14 @@ export class Exercise7Component {
     { id: 2, name: 'Testing' },
     { id: 3, name: 'Production' }
   ]
+  x: string = '';
   constructor() { }
   submit(f: any) {
-    console.log(f.value)
+    let obj = f.value;
+    if (obj.courseName === ''||obj.categoryName===''||obj.checBox==='')
+      this.x = 'border:2px ridge red'
+  }
+  f2() {
+    return this.x;
   }
 }

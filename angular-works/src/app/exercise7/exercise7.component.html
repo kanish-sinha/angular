@@ -2,7 +2,7 @@
     <div class="formGroup">
         <div class="mb-3">
             <label>Course Name</label>
-            <input required minlength="5" ngModel name="courseName" #courseName="ngModel" type="text" class="form-control" autocomplete="off">
+            <input required minlength="5" ngModel name="courseName" #courseName="ngModel" type="text" class="form-control" [style]="f2()" autocomplete="off">
             <div class="alert alert-danger" *ngIf="courseName.touched && !courseName.valid">
                 <div *ngIf="courseName.errors?.['required']">Course name is required</div>
                 <div *ngIf="courseName.errors?.['minlength']">Course name must be 5 character</div>
@@ -10,7 +10,7 @@
         </div>
         <br>
         <div class="mb-3">
-            <select required ngModel name="category" #categoryName='ngModel' class="form-select">
+            <select required ngModel name="category" #categoryName='ngModel' class="form-select" [style]="f2()">
                 <option *ngFor="let category of categories" [value]="category.id">{{category.name}}</option>
               </select>
             <div class="alert alert-danger" *ngIf="categoryName.touched && !categoryName.valid">
@@ -19,14 +19,18 @@
         </div>
         <br>
         <div class="mb-3 form-check">
-            <input required ngModel name="checkBox" #checkBox='ngModel' type="checkbox" class="form-check-input">
+            <input required ngModel name="checkBox" #checkBox='ngModel' type="checkbox" class="form-check-input" [style]="f2()">
             <label>Check it</label>
             <div class="alert alert-danger" *ngIf="checkBox.touched && !checkBox.valid">
                 Please agree the checkbox
             </div>
         </div>
         <br>
-        <button [disabled]="!fm.valid" type="submit" class="btn btn-primary">Submit</button>
+        <div *ngIf="fm.errors" class="alert alert-danger">
+
+        </div>
+        <!-- <button [disabled]="!fm.valid" type="submit" class="btn btn-primary">Submit</button> -->
+        <button type="submit" class="btn btn-primary">Submit</button>
         <p>{{fm.value| json}}</p>
     </div>
 </form>
