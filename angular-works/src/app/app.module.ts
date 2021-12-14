@@ -17,7 +17,8 @@ import { Exercise6Component } from './exercise6/exercise6.component';
 import { Exercise7Component } from './exercise7/exercise7.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { Exercise8Component } from './exercise8/exercise8.component';
-
+import { HttpsComponent } from './https/https.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,14 +33,16 @@ import { Exercise8Component } from './exercise8/exercise8.component';
     Exercise6Component,
     Exercise7Component,
     ReactiveFormComponent,
-    Exercise8Component
+    Exercise8Component,
+    HttpsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     NgbModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
