@@ -9,7 +9,7 @@ import { PasswordValidator } from './exercise8.validators';
 })
 export class Exercise8Component {
   form = new FormGroup({
-    'oldpassword': new FormControl('', [Validators.required, PasswordValidator.passwordWrong]),
+    'oldpassword': new FormControl('', [Validators.required],[PasswordValidator.passwordMistake]),
     'newpassword': new FormControl('', [Validators.required]),
     'confirmpassword': new FormControl('', [Validators.required])
   })
@@ -27,7 +27,7 @@ export class Exercise8Component {
     let obj = f.value;
     if(obj.newpassword!=obj.confirmpassword){
       this.form.setErrors({
-        invalidLogin:true
+        invalid:true
       })
     }
   }

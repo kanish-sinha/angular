@@ -3,10 +3,11 @@
         <div class="mb-3">
             <label class="form-label">Old Password</label>
             <input formControlName="oldpassword" type="password" class="form-control">
+            <div *ngIf="oldpassword?.pending">password matching....</div>
             <div *ngIf="oldpassword?.touched && oldpassword?.invalid " class="alert alert-danger">
                 <div *ngIf="oldpassword?.errors?.['required'];else block">Password is required</div>
                 <ng-template #block>
-                    <div *ngIf="oldpassword?.errors?.['passwordWrong']">Password is wrong</div>
+                    <div *ngIf="oldpassword?.errors?.['passwordMistake']">Password is wrong</div>
                 </ng-template>
             </div>
         </div>
