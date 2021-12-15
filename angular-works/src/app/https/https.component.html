@@ -1,1 +1,14 @@
-<p>https works!</p>
+<div class='container'>
+    <input #values type="text" (keyup.enter)="createUser(values)" placeholder="add title">
+    <input #updated type="text" placeholder="update title" [(ngModel)]="fa">
+</div>
+<div class="container-fluid">
+    <ul>
+        <li *ngFor="let item of post">
+            {{item |json}}
+            <br>
+            <button (click)="updateUser(item)" class="btn btn-success" style="margin-bottom: 2%;">Update</button>
+            <button (click)="deleteUser(item)" class="btn btn-danger" style="margin-bottom: 2%;">Delete</button>
+        </li>
+    </ul>
+</div>

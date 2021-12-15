@@ -22,3 +22,4 @@ export class ReactiveFormComponent {
     return this.form.get('password');
   }
 }
+

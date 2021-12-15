@@ -20,4 +20,7 @@ export class PasswordValidator {
             }, 5000);
         })
     }
+    static passwordMatch(control:AbstractControl,control2:AbstractControl){
+       
+    }
 }
