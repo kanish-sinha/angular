@@ -1,0 +1,45 @@
+<form [formGroup]="form" (ngSubmit)="submitSignup(form)" class="container-fluid">
+    <div class="form-group">
+        <div class="mb-3">
+            <label class="form-label">Username</label>
+            <input formControlName="username" type="text" class="form-control">
+            <div *ngIf="username?.touched && username?.invalid" class="alert alert-danger">
+                <div *ngIf="username?.errors?.['required']">Username is required</div>
+                <div *ngIf="username?.errors?.['usernameMatch']">Username is taken</div>
+            </div>
+            <span *ngIf="username?.pending">checking username availability</span>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Email address</label>
+            <input formControlName="email" type="email" class="form-control">
+            <span *ngIf="email?.pending">checking email availability</span>
+            <div *ngIf="email?.touched && email?.invalid" class="alert alert-danger">
+                <div *ngIf="email?.errors?.['required']">Email is required</div>
+                <div *ngIf="email?.errors?.['emailMatch']">Email already registered</div>
+                <div *ngIf="email?.errors?.['email']">Enter valid Email</div>
+            </div>
+        </div>
+        <div formGroupName="passwords" class="mb-3">
+            <div class="form-group">
+                <label class="form-label">Password</label>
+                <input formControlName="newpassword" type="password" class="form-control">
+                <div *ngIf="newpassword?.touched && newpassword?.invalid" class="alert alert-danger">
+                    <div *ngIf="newpassword?.errors?.['required']">Password is required</div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Confirm Password</label>
+                    <input formControlName="confirmpassword" type="password" class="form-control">
+                    <div *ngIf="confirmpassword?.touched && confirmpassword?.invalid" class="alert alert-danger">
+                        <div *ngIf="confirmpassword?.errors?.['required']">Confirm your password</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input">
+            <label class="form-check-label">Check me out</label>
+        </div>
+    </div>
+    <div *ngIf="form.errors" class="alert alert-danger">Password not matched</div>
+    <button [disabled]='!form.valid' type="submit" class="btn btn-primary">Submit</button>
+</form>
