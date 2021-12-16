@@ -18,10 +18,7 @@ export class SignupComponent implements OnInit {
       'confirmpassword': new FormControl('', [Validators.required])
     })
   })
-  constructor(service: ServeService,private service2:ApiService) {
-    //console.log(service.get());
-    //this.service2.getData().subscribe(response=>console.log(response))
-  }
+  constructor(service: ServeService) {  }
   get username() {
     return this.form.get('username');
   }
@@ -35,7 +32,6 @@ export class SignupComponent implements OnInit {
     return this.form.controls['passwords'].get('confirmpassword');
   }
   ngOnInit(): void {
-   // this.service2.getData().subscribe(response=>console.log(response))
   }
   submitSignup(f: any) {
     let s = f.value;

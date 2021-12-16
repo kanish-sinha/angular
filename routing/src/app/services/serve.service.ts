@@ -5,7 +5,6 @@ import { Injectable } from '@angular/core';
 export class ServeService {
   username = ['kanish', 'sinha', 'ansari', 'taseen'];
   email = ['kanish@gmail.com', 'kanishsnh@gmail.com'];
-  url = 'http://localhost:3000'
   constructor() { }
   getusername() {
     return this.username;
