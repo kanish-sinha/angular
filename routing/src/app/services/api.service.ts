@@ -12,4 +12,7 @@ export class ApiService {
   getData() {
     return this.http.get(this.url);
   }
+  postReq(obj: any) {
+    return this.http.post(this.url, obj);
+  }
 }

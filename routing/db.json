@@ -1,13 +1,19 @@
 {
-    "posts": [{
-            "username": "kanish",
-            "email": "kanishsnh@gmail.com",
-            "password": "kanish09"
-        },
-        {
-            "username": "sinha",
-            "email": "kanish@gmail.com",
-            "password": "kanish09"
-        }
-    ]
+  "posts": [
+    {
+      "id": 1,
+      "username": "kanish",
+      "email": "kanishsnh@gmail.com",
+      "password": "kanish09"
+    },
+    {
+      "id": 2,
+      "username": "sinha",
+      "email": "kanish@gmail.com",
+      "password": "kanish0"
+    },
+    {
+      "id": 3
+    }
+  ]
 }

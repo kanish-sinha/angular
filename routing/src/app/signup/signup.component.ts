@@ -9,7 +9,7 @@ import { SignupValidate } from '../validators/signup.validator';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
-  arr: any;
+  arr: any; fa = '';
   form = new FormGroup({
     'username': new FormControl('', [Validators.required], [SignupValidate.usernameMatch]),
     'email': new FormControl('', [Validators.required, Validators.email], [SignupValidate.emailMatch]),
@@ -41,16 +41,35 @@ export class SignupComponent implements OnInit {
       this.arr = response;
     })
   }
+  createUser(f: HTMLInputElement) {
+
+  }
   submitSignup(f: any) {
     let s = f.value;
     if (s.passwords.newpassword !== s.passwords.confirmpassword) {
       this.form.setErrors({ invalid: true });
+      this.fa = 'Password Not Matched'
     }
     for (var i = 0; i < this.arr.length; i++) {
       if (s.username == this.arr[i].username) {
         this.form.setErrors({ invalid: true })
+        this.fa = 'Username already taken'
         break;
       }
+    }
+    for (var i = 0; i < this.arr.length; i++) {
+      if (s.email == this.arr[i].email) {
+        this.form.setErrors({ invalid: true })
+        this.fa = 'Email already registered'
+        break;
+      }
+    }
+    if (i >= this.arr.length) {
+      let arr2 = { id: this.arr.length, username: s.username, email: s.email, password: s.password };
+      f.value = '';
+      this.service2.postReq(JSON.stringify(arr2)).subscribe(response => {
+        this.arr.splice(0, 0, arr2);
+      })
     }
   }
 }
