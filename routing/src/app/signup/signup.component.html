@@ -40,6 +40,6 @@
             <label class="form-check-label">Check me out</label>
         </div>
     </div>
-    <!-- <div *ngIf="form.errors" class="alert alert-danger">Password not matched</div> -->
+    <div *ngIf="form.errors" class="alert alert-danger">Password not matched</div>
     <button [disabled]='!form.valid' type="submit" class="btn btn-primary">Submit</button>
 </form>

@@ -24,11 +24,11 @@ export class SignupValidate {
             setTimeout(() => {
                 let serve = new ServeService();
                 let arr = serve.getemail();
-                for(var i=0;i<arr.length;i++){
+                for (var i = 0; i < arr.length; i++) {
                     if (control.value === arr[i])
-                    resolve({ emailMatch: true })
+                        resolve({ emailMatch: true })
                 }
-                if(i>=arr.length)
+                if (i >= arr.length)
                     resolve(null);
             }, 4000);
         })

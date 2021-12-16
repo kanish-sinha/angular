@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ServeService {
-  username = ['kanish', 'sinha', 'ansari', 'taseen'];
+  username = ['ansari', 'taseen'];
   email = ['kanish@gmail.com', 'kanishsnh@gmail.com'];
   constructor() { }
   getusername() {
